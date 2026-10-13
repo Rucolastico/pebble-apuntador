@@ -1,0 +1,2 @@
+# Da acceso a /dev/uinput al usuario con sesión activa (ACL de logind), sin abrirlo a todo el grupo input.
+KERNEL=="uinput", SUBSYSTEM=="misc", TAG+="uaccess", OPTIONS+="static_node=uinput"

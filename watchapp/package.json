@@ -1,0 +1,56 @@
+{
+  "name": "apuntador",
+  "author": "Rucolastico",
+  "version": "1.0.0",
+  "keywords": [
+    "pebble-app"
+  ],
+  "private": true,
+  "dependencies": {
+    "@rebble/clay": "^1.1.0"
+  },
+  "pebble": {
+    "displayName": "Apuntador",
+    "uuid": "ef1e624c-e757-4eb8-805d-5048f9dd16e2",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": [
+      "aplite",
+      "basalt",
+      "chalk",
+      "diorite",
+      "emery",
+      "flint",
+      "gabbro"
+    ],
+    "watchapp": {
+      "watchface": false
+    },
+    "messageKeys": [
+      "Action",
+      "Status",
+      "Host",
+      "Result",
+      "Vibe1",
+      "Vibe2",
+      "Token",
+      "Tailscale",
+      "Locales",
+      "Port",
+      "Perfil"
+    ],
+    "resources": {
+      "media": [
+        {
+          "type": "bitmap",
+          "name": "ICONO_MENU",
+          "file": "images/icono-menu.png",
+          "menuIcon": true
+        }
+      ]
+    },
+    "capabilities": [
+      "configurable"
+    ]
+  }
+}

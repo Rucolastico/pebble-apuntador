@@ -1,0 +1,6 @@
+watchapp/build/
+watchapp/node_modules/
+watchapp/.lock-waf*
+watchapp/screenshots/
+__pycache__/
+*.orig

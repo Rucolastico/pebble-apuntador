@@ -1,0 +1,25 @@
+Control your slides from your wrist. Apuntador turns your Pebble into a presentation remote for a Linux computer (PowerPoint, LibreOffice Impress or OnlyOffice).
+
+• Down / Up: next / previous slide
+• Hold Down: start the slideshow · Hold Up: start from the current slide
+• Select: black screen · Hold Select: exit the slideshow
+• Session timer with vibration alerts (40 and 50 minutes by default)
+• Double click Back: reset the timer
+• Secure: every request is signed (HMAC-SHA256); the token never travels over the network
+• Works over Wi-Fi or Tailscale, in English and Spanish
+
+Requires a small free server on your computer (Linux with systemd). Installation guide: https://github.com/Rucolastico/pebble-apuntador
+
+—
+
+Controla tus diapositivas desde la muñeca. Apuntador convierte tu Pebble en un control de presentaciones para una computadora con Linux (PowerPoint, LibreOffice Impress u OnlyOffice).
+
+• Abajo / Arriba: diapositiva siguiente / anterior
+• Abajo largo: iniciar presentación · Arriba largo: desde la diapositiva actual
+• Select: pantalla negra · Select largo: salir de la presentación
+• Cronómetro de la sesión con avisos por vibración (40 y 50 minutos por defecto)
+• Doble clic en Atrás: cronómetro a cero
+• Seguro: cada petición va firmada (HMAC-SHA256); el token nunca viaja por la red
+• Funciona por Wi-Fi o Tailscale, en español e inglés
+
+Necesita un pequeño servidor gratuito en tu computadora (Linux con systemd). Guía de instalación: https://github.com/Rucolastico/pebble-apuntador

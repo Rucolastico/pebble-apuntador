@@ -1,0 +1,15 @@
+[Unit]
+Description=Apuntador Pebble (teclas vía uinput)
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/python3 @SERVIDOR@
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ReadWritePaths=%h/.config/apuntador
+
+[Install]
+WantedBy=default.target
