@@ -49,7 +49,7 @@ El instalador:
 
 ### 2. App del reloj
 
-Instálala desde la tienda de Pebble (busca «Apuntador») y abre sus ajustes en la app Pebble del teléfono:
+Instálala desde la [tienda de Pebble](https://apps.repebble.com/4b99f08452124d629e2b57c7) y abre sus ajustes en la app Pebble del teléfono:
 
 - **Token**: el que te mostró el instalador (está en `~/.config/apuntador/token`).
 - **Dirección de Tailscale** (opcional): si usas [Tailscale](https://tailscale.com), la IP 100.x de tu computadora. Se prueba primero y sirve en cualquier red.
@@ -150,7 +150,7 @@ The installer installs `python3-evdev` (dnf, apt, pacman or zypper), adds a udev
 
 ### 2. Watch app
 
-Install it from the Pebble appstore (search for "Apuntador") and open its settings in the Pebble phone app:
+Install it from the [Pebble appstore](https://apps.repebble.com/4b99f08452124d629e2b57c7) and open its settings in the Pebble phone app:
 
 - **Token**: the one printed by the installer (stored in `~/.config/apuntador/token`).
 - **Tailscale address** (optional): your computer's 100.x IP if you use [Tailscale](https://tailscale.com). Tried first; works on any network.
