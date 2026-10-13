@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Genera los iconos de la app: menú del reloj (25×25) y tienda (80×80 y 144×144)."""
+"""Genera los iconos de la app: menú del reloj (25×25, estilo de sistema) y tienda (80×80 y 144×144)."""
 from pathlib import Path
 from PIL import Image, ImageDraw
 
@@ -29,8 +29,27 @@ def dibujar(lado, fondo=True):
     return img.resize((lado, lado), Image.LANCZOS)
 
 
+def icono_menu(lado=25):
+    """Estilo de los iconos de PebbleOS: contorno negro de ~2 px sobre fondo
+    transparente, sin antialias, para que el lanzador lo invierta al seleccionarlo."""
+    E = ESCALA
+    img = Image.new("RGBA", (lado * E, lado * E), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    negro = (0, 0, 0, 255)
+    # Pantalla (contorno), pie y base, en coordenadas de píxel del icono final
+    d.rounded_rectangle([1 * E, 3 * E, 24 * E - 1, 18 * E - 1], radius=2 * E, outline=negro, width=2 * E)
+    d.rectangle([11.5 * E, 18 * E, 13.5 * E - 1, 22 * E - 1], fill=negro)
+    d.rectangle([7 * E, 21 * E, 18 * E - 1, 23 * E - 1], fill=negro)
+    # Triángulo de "siguiente" relleno
+    d.polygon([(9.5 * E, 6.5 * E), (9.5 * E, 14.5 * E), (16.5 * E, 10.5 * E)], fill=negro)
+    alfa = img.resize((lado, lado), Image.LANCZOS).getchannel("A").point(lambda a: 255 if a >= 110 else 0)
+    out = Image.new("RGBA", (lado, lado), (0, 0, 0, 0))
+    out.putalpha(alfa)
+    return out
+
+
 if __name__ == "__main__":
-    dibujar(25).save(RAIZ / "watchapp/resources/images/icono-menu.png")
+    icono_menu().save(RAIZ / "watchapp/resources/images/icono-menu.png")
     dibujar(80).save(RAIZ / "tienda/icono-80.png")
     dibujar(144).save(RAIZ / "tienda/icono-144.png")
     print("Iconos generados")
